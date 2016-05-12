@@ -1,0 +1,39 @@
+diff -r 3f744392c243 src/bns/bdat.cpp
+--- a/src/bns/bdat.cpp	Sun Sep 06 03:49:26 2015 +0200
++++ b/src/bns/bdat.cpp	Sun Oct 11 12:40:56 2015 +0200
+@@ -1,6 +1,7 @@
+ #include "bdat.h"
+ 
+-//#define VERBOSE_OUT
++#define VERBOSE_OUT
++#include <wx/textfile.h>
+ 
+ wxArrayString LookupSplitToWords(wxByte* data, wxUint32 size)
+ {
+@@ -245,7 +246,25 @@
+     }
+     SizeDecompressed = mos.GetSize();
+     if(mos.GetSize() > (1<<16)-1) {
+-        wxPrintf(wxT("CRITICAL ERROR: Subarchive decompressed size overflow\n"));
++        // Dump lookup content of subarchive
++        wxString dump = wxT("c:\\bnsdat.fifty.log");
++        //wxString dump = wxT("/home/ronny/Desktop/bnsdat.fifty.xml");
++        wxTextFile txt(dump);
++        if(txt.Exists()) {
++            txt.Open();
++        } else {
++            txt.Create();
++        }
++        txt.Clear();
++        for(wxUint32 i=0; i<FieldLookupCount; i++) {
++            wxArrayString words = LookupSplitToWords(Lookups[i].Data, Lookups[i].Size);
++            txt.AddLine(wxT("<text alias=\"") + words[0] + wxT("\">"));
++            txt.AddLine(wxT("  ") + words[1]);
++            txt.AddLine(wxT("</text>"));
++        }
++        txt.Write();
++        txt.Close();
++        wxPrintf(wxT("CRITICAL ERROR: Subarchive decompressed size overflow (%i bytes)\nXML-DUMP: ") + dump + wxT("\n"), mos.GetSize()-(1<<16)+1);
+         exit(255);
+     }
+     wxByte* DataDecompressed = new wxByte[SizeDecompressed];

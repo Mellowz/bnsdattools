@@ -1,0 +1,78 @@
+[file_prefs]
+final_new_line=true
+ensure_convert_new_lines=false
+strip_trailing_spaces=true
+replace_tabs=true
+
+[indentation]
+indent_width=4
+indent_type=0
+indent_hard_tab_width=8
+detect_indent=false
+detect_indent_width=false
+indent_mode=2
+
+[project]
+name=bnsdat
+base_path=./
+description=Extraction/Compression tool
+file_patterns=*;
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=1
+FILE_NAME_0=83;C;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fmain.h;0;4
+FILE_NAME_1=5225;C++;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fmain.cpp;0;4
+FILE_NAME_2=200;C;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fbns%2Fbdat.h;0;4
+FILE_NAME_3=17403;C++;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fbns%2Fbdat.cpp;0;4
+FILE_NAME_4=738;C;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fbns%2Fbi18n.h;0;4
+FILE_NAME_5=1334;C++;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fbns%2Fbi18n.cpp;0;4
+FILE_NAME_6=492;C++;0;EUTF-8;0;1;0;%2Fhome%2Fronny%2FDocuments%2Fdevelopment%2Fbns%2Fbnsdat%2Fsrc%2Fbns%2Fbcrypt.cpp;0;4
+
+[VTE]
+last_dir=/home/ronny/Documents/development/bns/bnsdat
+
+[build-menu]
+NF_00_LB=Make All
+NF_00_CM=make
+NF_00_WD=%p
+NF_01_LB=Make Custom
+NF_01_CM=make
+NF_01_WD=%p
+NF_02_LB=Make Object
+NF_02_CM=make %d/%f.o
+NF_02_WD=%p
+NF_03_LB=Make Clean
+NF_03_CM=make clean
+NF_03_WD=
+EX_00_LB=_Execute
+EX_00_CM=%p/build/linux/bin/bnsdat -t '/home/ronny/Documents/development/bns-tools/bnsdat/test/xml.dat.files'
+EX_00_WD=%p/build/linux/bin
+filetypes=C++;C;
+C++FT_00_LB=_Compile
+C++FT_00_CM=make %d/%f.o
+C++FT_00_WD=%p
+CFT_00_LB=_Compile
+CFT_00_CM=make %d/%e.cpp.o
+CFT_00_WD=%p
+CFT_01_LB=_Build All
+CFT_01_CM=make
+CFT_01_WD=%p
+CFT_02_LB=Clean
+CFT_02_CM=make clean
+CFT_02_WD=%p
+C++FT_01_LB=_Build All
+C++FT_01_CM=make
+C++FT_01_WD=%p
+C++FT_02_LB=Clean
+C++FT_02_CM=make clean
+C++FT_02_WD=%p
+
+[gproject]
+source_patterns=*.c;*.C;*.cpp;*.cxx;*.c++;*.cc;
+header_patterns=*.h;*.H;*.hpp;*.hxx;*.h++;*.hh;*.m;
+ignored_dirs_patterns=.*;CVS;
+generate_tags=true

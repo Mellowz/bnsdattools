@@ -1,0 +1,27 @@
+syntax: glob
+*.o
+*.depend
+*.res
+*.deb
+*.rpm
+*.dsc
+*.changes
+*.tar.gz
+*.tar.bz2
+*.zip
+*.exe
+*.bat
+obj/*
+deb/*
+build/linux/bin/*
+build/msw/32/bin/*
+test/*.dat.files
+test/xml.*
+test/*.dat
+test/*.bin
+test/datafile*.*
+test/*.tar.bz2
+test/*.zip
+make-*
+makefile
+Makefile

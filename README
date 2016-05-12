@@ -1,0 +1,49 @@
+#############
+### LINUX ###
+#############
+
+    ------------------------------------------
+    - requirements to build bnsdat on debian -
+    ------------------------------------------
+    + bash
+    + make
+    + build-essentials (gcc, g++, lib*,...)
+    + libwxgtk2.8-dev
+    + libwxbase2.8-dev
+    + libssl-dev
+
+    --------------------------
+    - build & install bnsdat -
+    --------------------------
+    # open a terminal
+    # change into bnsdat directory
+    # run configure (with --prefix=DIR if you want to install in a directory other than /usr/local)
+    ./configure --prefix=/usr
+    make
+    # run as root or installation will fail
+    sudo make install
+
+    # remove bnsdat
+    # run as root or uninstallation will fail
+    sudo make uninstall
+
+    # NOTE: create a source package for redistribution
+    make tgz
+
+    # NOTE: create a debian binary package for redistribution
+    # (configure with prefix /usr to prevent lintian errors)
+    # (run as root for correct ownership of files)
+    ./configure --prefix=/usr
+    sudo make deb
+
+#############
+### WINNT ###
+#############
+
+    # open MinGW32 environment
+    # change into bnsdat directory
+    # run configure
+    ./configure --config-mingw32
+    make
+
+    # binary file can be found in 'build/msw/bnsdat.exe'

@@ -1,0 +1,4 @@
+#include "icons.rc"
+
+// embed a version 6 manifest file to use ComCtl32.dll (modern WinXP+ gui style)
+1 MANIFEST "app.manifest"
